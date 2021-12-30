@@ -1,14 +1,13 @@
 
-import React from 'react';
-import {
-  SafeAreaView, Text
-} from 'react-native';
+import React, { FC } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import MainStack from './src/navigation/stacks/_MainStack';
 
-const App = () => {
+const App:FC = () => {
   return (
-    <SafeAreaView>
-      <Text>hello world</Text>
-    </SafeAreaView>
+    <NavigationContainer>
+      <MainStack />
+    </NavigationContainer>
   );
 };
 

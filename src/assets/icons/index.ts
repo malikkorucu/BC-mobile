@@ -3,7 +3,7 @@ import * as svgs from "../svg/*.svg"
 import Car from './svg/car.svg'
 
 const icons = {
-    ...svgs
+    Car
 } as any
 
 type Props = {

@@ -2,6 +2,7 @@ import React from 'react';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import {DrawerMenuItemList} from './_DrawerMenuItemList';
 
+
 const Drawer = createDrawerNavigator();
 
 export const DrawerMenuNavigaiton = () => {

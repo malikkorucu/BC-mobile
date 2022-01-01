@@ -7,13 +7,13 @@ const Screens = [
         title:'Ana Sayfa',
         name: 'HomeScreen',
         component: HomeScreen,
-        headerShown: false
+        headerShown: true,
     },
     {
         title:'Detay Sayfası',
         name: 'HomeDetail',
         component: HomeDetail,
-        headerShown: true
+        headerShown: true,
     }
 ] as Array<IScreen>
 

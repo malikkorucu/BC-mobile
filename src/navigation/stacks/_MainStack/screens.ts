@@ -1,5 +1,7 @@
 import { SplashScreen } from "../../../screens/SplashScreen/SplashScreen";
 import { BottomTabNavigation } from './../../bottom-tab/BottomTabNavigation';
+import { DrawerMenuNavigaiton } from '../../drawer/DrawerMenuNavigation';
+import DrawerNavigator from '../../drawer/AnimatedDrawerNavigation';
 
 const Screens = [
     {
@@ -8,10 +10,15 @@ const Screens = [
         headerShown: false
     },
     {
+        name: 'DrawerTabNavigation',
+        component: DrawerMenuNavigaiton,
+        headerShown: false
+    },
+    {
         name: 'BottomTabNavigation',
         component: BottomTabNavigation,
         headerShown: true
-    }
+    },
 ]
 
 export default Screens;

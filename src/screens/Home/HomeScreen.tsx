@@ -1,16 +1,36 @@
-import React, { FC,useEffect } from 'react';
-import { Button, Text, View } from 'react-native';
-import { NavigationProp, useNavigation } from '@react-navigation/native';
+import React, {FC, useLayoutEffect} from 'react';
+import {Button, Text, View} from 'react-native';
+import {NavigationProp, useNavigation} from '@react-navigation/native';
+import {TextInput} from '@components';
+import layout from '../../config/layout.json';
 
 export const HomeScreen: FC<any> = () => {
-    const navigation: NavigationProp<any> = useNavigation();
+  const navigation: any = useNavigation();
 
-    useEffect(()=> {
-        console.log('state',navigation.getState())
-    },[])
-    return (
-        <View style={{ flex: 1,padding:16 }}>
-            <Button title="Home Detail" onPress={() => navigation.navigate('HomeDetail')} />
-        </View>
-    )
-}
+  useLayoutEffect(() => {
+    if (layout.menu === 'drawer') {
+      navigation.setOptions({
+        headerRight: () => (
+          <Button title="Drawer" onPress={() => navigation.openDrawer()} />
+        ),
+      });
+    }
+  }, [navigation]);
+
+  return (
+    <View
+      style={{
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 16,
+      }}>
+      <Button
+        title="Home Detail"
+        onPress={() => navigation.navigate('HomeDetail')}
+      />
+      <TextInput />
+      <Text>{JSON.stringify(navigation.getState(), null, 2)}</Text>
+    </View>
+  );
+};

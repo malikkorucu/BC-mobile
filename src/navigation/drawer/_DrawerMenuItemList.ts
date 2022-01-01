@@ -1,17 +1,17 @@
 import { AboutScreen } from '../../screens/About/AboutScreen';
-import HomeStack from './../stacks/HomeStack/index';
+import HomeStack from '../stacks/HomeStack/index';
 
-export const BottomTabItemList = [
+export const DrawerMenuItemList = [
     {
         label: 'Home',
         icon: 'Car',
-        component:HomeStack,
+        component: HomeStack,
         headerShown:false
     },
     {
         label: 'About',
         icon: 'Car',
-        component:AboutScreen,
+        component: AboutScreen,
         headerShown:true
     },
 ]

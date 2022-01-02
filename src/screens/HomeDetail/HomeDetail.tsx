@@ -27,6 +27,7 @@ export const HomeDetail: FC<any> = () => {
   const navigation = useNavigation();
   const [count, setCount] = useState(0);
 
+  // Page specific header options !
   useLayoutEffect(() => {
     navigation.setOptions({
       headerRight: () => <HeaderRight count={count} setCount={setCount} />,

@@ -10,6 +10,7 @@
     "aab-macos": "cd android && ./gradlew bundleRelease",
     "apk-windows": "cd android && gradlew assembleRelease  && cd ..",
     "android-release": "npx react-native run-android --variant=release",
+    "cc":"npm start -- --reset-cache",
     "android": "npx react-native run-android",
     "ios": "npx react-native run-ios --simulator='iPhone'",
     "link": "npx react-native link",

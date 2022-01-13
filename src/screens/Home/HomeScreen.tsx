@@ -1,10 +1,12 @@
-import React, {FC, Ref, useLayoutEffect, useState} from 'react';
+import React, {FC, useLayoutEffect, useState} from 'react';
 import {Button, StatusBar, Text, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import layout from '../../config/layout.json';
 import {useEffect, useRef} from 'react';
 import {DateTimePicker} from './../../components/DateTimePicker/DateTimePicker';
 import BottomSheet from './../../components/BottomSheet/BottomSheet';
+import {CollapsibleView, AccordionList} from '@components';
+import { showToast } from '../../utils/ToastMessage';
 
 export const HomeScreen: FC<any> = () => {
   const navigation: any = useNavigation();
@@ -52,6 +54,7 @@ export const HomeScreen: FC<any> = () => {
           />
         </View>
         <DateTimePicker visible={modalVisible} setVisible={setModalVisible} />
+        <CollapsibleView />
         <BottomSheet
           ref={bottomsheet}
           height={500}
@@ -60,6 +63,9 @@ export const HomeScreen: FC<any> = () => {
           closeOnPressMask>
           <Text>aslşdkfjasşldfkj</Text>
         </BottomSheet>
+        <Button title="Toast message" onPress={()=> {
+         showToast('asfdasdfasf');
+        }}/>
       </View>
     </>
   );

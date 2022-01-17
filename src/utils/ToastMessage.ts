@@ -1,6 +1,6 @@
 
 import { Platform } from 'react-native';
-import Toast from '../components/ToastMessage/lib'
+import {Toast} from '../components/ToastMessage/lib'
 
 const topOffset = Platform.select({
     ios: 50,
